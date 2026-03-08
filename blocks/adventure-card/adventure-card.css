@@ -1,0 +1,77 @@
+.adventure-card {
+  padding: 40px 0;
+}
+
+.adventure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.adventure-item {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.adventure-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.adventure-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.adventure-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.adventure-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.adventure-item:hover .adventure-image img {
+  transform: scale(1.05);
+}
+
+.adventure-content {
+  padding: 20px;
+}
+
+.adventure-content h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-color);
+  line-height: 1.3;
+}
+
+.adventure-location {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: var(--dark-color);
+}
+
+.adventure-price {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--link-color);
+}
+
+@media (width < 768px) {
+  .adventure-grid {
+    grid-template-columns: 1fr;
+  }
+}

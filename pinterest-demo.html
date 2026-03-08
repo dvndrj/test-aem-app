@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pinterest Ideas - Discover Inspiration</title>
+    <meta name="description" content="Discover and save creative ideas">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/blocks/idea-search/idea-search.css">
+    <link rel="stylesheet" href="/blocks/idea-cards/idea-cards.css">
+    <style>
+        .pinterest-header {
+            background: white;
+            padding: 16px 24px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .pinterest-logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #e60023;
+        }
+        .fav-link {
+            background: #e60023;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .section-title {
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+    </style>
+    <script src="/scripts/aem.js" type="module"></script>
+    <script src="/scripts/scripts.js" type="module"></script>
+</head>
+<body class="appear">
+    <div class="pinterest-header">
+        <div class="pinterest-logo">📌 Pinterest Ideas</div>
+        <a href="/favorites.html" class="fav-link">♥ My Favorites</a>
+    </div>
+
+    <main>
+        <div class="section">
+            <div>
+                <h1 class="section-title">Discover Ideas</h1>
+                <div class="idea-search block"></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div>
+                <h2>Explore the Best of Pinterest</h2>
+                <div class="idea-cards block">
+                    <div>
+                        <div><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400" alt="Home decor"></div>
+                        <div>Modern Living Room</div>
+                        <div>Home Decor</div>
+                    </div>
+                    <div>
+                        <div><img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400" alt="Food"></div>
+                        <div>Healthy Recipes</div>
+                        <div>Food & Drink</div>
+                    </div>
+                    <div>
+                        <div><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400" alt="Fashion"></div>
+                        <div>Summer Fashion</div>
+                        <div>Style</div>
+                    </div>
+                    <div>
+                        <div><img src="https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?w=400" alt="Travel"></div>
+                        <div>Travel Destinations</div>
+                        <div>Travel</div>
+                    </div>
+                    <div>
+                        <div><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=400" alt="DIY"></div>
+                        <div>DIY Projects</div>
+                        <div>Crafts</div>
+                    </div>
+                    <div>
+                        <div><img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=400" alt="Fitness"></div>
+                        <div>Workout Routines</div>
+                        <div>Fitness</div>
+                    </div>
+                    <div>
+                        <div><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400" alt="Office"></div>
+                        <div>Office Organization</div>
+                        <div>Productivity</div>
+                    </div>
+                    <div>
+                        <div><img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=400" alt="Garden"></div>
+                        <div>Garden Ideas</div>
+                        <div>Outdoor</div>
+                    </div>
+                    <div>
+                        <div><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400" alt="Business"></div>
+                        <div>Business Tips</div>
+                        <div>Career</div>
+                    </div>
+                    <div>
+                        <div><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Portrait"></div>
+                        <div>Photography Tips</div>
+                        <div>Photography</div>
+                    </div>
+                    <div>
+                        <div><img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=400" alt="Books"></div>
+                        <div>Reading List</div>
+                        <div>Books</div>
+                    </div>
+                    <div>
+                        <div><img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400" alt="Pets"></div>
+                        <div>Pet Care</div>
+                        <div>Animals</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section grey">
+            <div style="text-align: center; padding: 40px 0;">
+                <h2>Features</h2>
+                <p>✓ Search and filter ideas</p>
+                <p>✓ Save favorites (click the heart icon)</p>
+                <p>✓ Browse by category</p>
+                <p>✓ Responsive design</p>
+                <p><strong>Try it:</strong> Click hearts to save favorites, then visit "My Favorites"</p>
+            </div>
+        </div>
+    </main>
+
+    <script type="module">
+        import decorateSearch from '/blocks/idea-search/idea-search.js';
+        import decorateCards from '/blocks/idea-cards/idea-cards.js';
+        
+        document.querySelectorAll('.idea-search').forEach(decorateSearch);
+        document.querySelectorAll('.idea-cards').forEach(decorateCards);
+    </script>
+</body>
+</html>

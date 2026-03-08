@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Favorites - Pinterest Ideas</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <style>
+        .pinterest-header {
+            background: white;
+            padding: 16px 24px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .pinterest-logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #e60023;
+        }
+        .back-link {
+            background: #e60023;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .favorites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .fav-card {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .fav-card img {
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+        }
+        .fav-info {
+            padding: 16px;
+        }
+        .fav-info h3 {
+            margin: 0 0 8px;
+            font-size: 16px;
+        }
+        .fav-info span {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+        .remove-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            color: #e60023;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        .empty-state {
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .empty-state h2 {
+            color: #666;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body class="appear">
+    <div class="pinterest-header">
+        <div class="pinterest-logo">📌 My Favorites</div>
+        <a href="/pinterest-demo.html" class="back-link">← Back to Ideas</a>
+    </div>
+
+    <main>
+        <div id="favorites-container"></div>
+    </main>
+
+    <script>
+        function loadFavorites() {
+            const container = document.getElementById('favorites-container');
+            const favorites = JSON.parse(localStorage.getItem('pinterest-favorites') || '[]');
+            const favData = JSON.parse(localStorage.getItem('pinterest-favorites-data') || '{}');
+
+            if (favorites.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <h2>No favorites yet</h2>
+                        <p>Start exploring and save ideas you love!</p>
+                        <a href="/pinterest-demo.html" class="back-link">Discover Ideas</a>
+                    </div>
+                `;
+                return;
+            }
+
+            const grid = document.createElement('div');
+            grid.className = 'favorites-grid';
+
+            favorites.forEach(id => {
+                const data = favData[id];
+                if (!data) return;
+
+                const card = document.createElement('div');
+                card.className = 'fav-card';
+                card.innerHTML = `
+                    <img src="${data.image}" alt="${data.title}">
+                    <button class="remove-btn" onclick="removeFavorite('${id}')">♥</button>
+                    <div class="fav-info">
+                        <h3>${data.title}</h3>
+                        <span>${data.category}</span>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+
+            container.appendChild(grid);
+        }
+
+        window.removeFavorite = function(id) {
+            let favorites = JSON.parse(localStorage.getItem('pinterest-favorites') || '[]');
+            let favData = JSON.parse(localStorage.getItem('pinterest-favorites-data') || '{}');
+            
+            favorites = favorites.filter(f => f !== id);
+            delete favData[id];
+            
+            localStorage.setItem('pinterest-favorites', JSON.stringify(favorites));
+            localStorage.setItem('pinterest-favorites-data', JSON.stringify(favData));
+            
+            location.reload();
+        };
+
+        loadFavorites();
+    </script>
+</body>
+</html>

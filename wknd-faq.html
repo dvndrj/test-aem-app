@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ - WKND</title>
+    <meta name="description" content="Frequently asked questions about WKND adventures">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/blocks/accordion/accordion.css">
+    <script src="/scripts/aem.js" type="module"></script>
+    <script src="/scripts/scripts.js" type="module"></script>
+</head>
+<body class="appear">
+    <header></header>
+    <main>
+        <div class="section">
+            <div>
+                <h1>Frequently Asked Questions</h1>
+                <p>Find answers to common questions about WKND adventures</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div>
+                <div class="accordion block">
+                    <div>
+                        <div>How do I book an adventure?</div>
+                        <div>
+                            <p>Booking an adventure is easy! Simply browse our adventures, select the one you like, choose your preferred date, and complete the booking form. You'll receive a confirmation email with all the details.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>What is your cancellation policy?</div>
+                        <div>
+                            <p>We offer free cancellation up to 48 hours before your adventure starts. Cancellations made within 48 hours are subject to a 50% fee. No-shows are non-refundable.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>What should I bring on an adventure?</div>
+                        <div>
+                            <p>Each adventure has specific requirements, but generally you should bring comfortable clothing, water, sunscreen, and a camera. Detailed packing lists are provided in your confirmation email.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>Are adventures suitable for beginners?</div>
+                        <div>
+                            <p>Yes! We offer adventures for all skill levels. Each adventure listing includes a difficulty rating and requirements. Our guides are experienced in working with beginners.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>Do you provide equipment?</div>
+                        <div>
+                            <p>Most adventures include all necessary equipment in the price. Specific equipment details are listed on each adventure page. Personal items like clothing and water bottles are not provided.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>What if the weather is bad?</div>
+                        <div>
+                            <p>Safety is our priority. If weather conditions are unsafe, we'll reschedule your adventure or provide a full refund. We monitor weather closely and will contact you if changes are needed.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>Can I bring children?</div>
+                        <div>
+                            <p>Many of our adventures are family-friendly! Age restrictions vary by adventure and are clearly marked. Children under 18 must be accompanied by an adult.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>How do I contact customer support?</div>
+                        <div>
+                            <p>You can reach our support team at support@wknd.com or call us at 1-800-WKND-ADV. We're available 24/7 to assist you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script type="module">
+        import decorate from '/blocks/accordion/accordion.js';
+        document.querySelectorAll('.accordion').forEach(decorate);
+    </script>
+</body>
+</html>

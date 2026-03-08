@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>WKND - Your Guide to Adventure</title>
+    <meta name="description" content="Discover amazing adventures and travel stories from around the world">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/blocks/hero/hero.css">
+    <link rel="stylesheet" href="/blocks/cards/cards.css">
+    <link rel="stylesheet" href="/blocks/adventure-card/adventure-card.css">
+    <script src="/scripts/aem.js" type="module"></script>
+    <script src="/scripts/scripts.js" type="module"></script>
+</head>
+<body class="appear">
+    <header></header>
+    <main>
+        <!-- Hero Section -->
+        <div class="section">
+            <div class="hero block">
+                <div>
+                    <div>
+                        <picture>
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200" alt="Mountain landscape">
+                        </picture>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h1>Your Next Adventure Awaits</h1>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p>Discover breathtaking destinations and unforgettable experiences</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <a href="/adventures" class="button">Explore Adventures</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Adventures -->
+        <div class="section">
+            <div>
+                <h2>Featured Adventures</h2>
+                <div class="adventure-card block">
+                    <div>
+                        <div><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400" alt="Mountain hiking"></div>
+                        <div>Mountain Hiking</div>
+                        <div>Swiss Alps</div>
+                        <div>$299</div>
+                        <div><a href="/adventures/mountain-hiking">View Details</a></div>
+                    </div>
+                    <div>
+                        <div><img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400" alt="Beach surfing"></div>
+                        <div>Beach Surfing</div>
+                        <div>Bali, Indonesia</div>
+                        <div>$199</div>
+                        <div><a href="/adventures/beach-surfing">View Details</a></div>
+                    </div>
+                    <div>
+                        <div><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=400" alt="Desert safari"></div>
+                        <div>Desert Safari</div>
+                        <div>Dubai, UAE</div>
+                        <div>$249</div>
+                        <div><a href="/adventures/desert-safari">View Details</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Choose WKND -->
+        <div class="section grey">
+            <div>
+                <h2>Why Choose WKND</h2>
+                <div class="cards block">
+                    <div>
+                        <div>
+                            <h3>🌍 Global Destinations</h3>
+                            <p>Access to adventures in over 50 countries worldwide</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h3>⭐ Expert Guides</h3>
+                            <p>Professional guides with years of experience</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h3>💯 Best Prices</h3>
+                            <p>Competitive pricing with no hidden fees</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script type="module">
+        import decorateHero from '/blocks/hero/hero.js';
+        import decorateCards from '/blocks/cards/cards.js';
+        import decorateAdventure from '/blocks/adventure-card/adventure-card.js';
+        
+        document.querySelectorAll('.hero').forEach(decorateHero);
+        document.querySelectorAll('.cards').forEach(decorateCards);
+        document.querySelectorAll('.adventure-card').forEach(decorateAdventure);
+    </script>
+</body>
+</html>
