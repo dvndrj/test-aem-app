@@ -227,6 +227,30 @@ main img {
   width: 100%;
 }
 
+/* Custom icon colors */
+.icon.icon-star {
+  color: #ffd700;
+}
+
+.icon.icon-heart {
+  color: #ff0000;
+}
+
+.icon.icon-check {
+  color: #00ff00;
+}
+
+.icon.icon-arrow-right {
+  color: var(--link-color);
+}
+
+/* Icon in buttons */
+a.button .icon,
+button .icon {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
 /* sections */
 main > .section {
   margin: 40px 0;
