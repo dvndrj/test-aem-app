@@ -1,0 +1,29 @@
+{
+  "data": [
+    {"name": "Laptop Pro", "price": "$1299", "category": "Electronics", "description": "High-performance laptop"},
+    {"name": "Wireless Mouse", "price": "$29", "category": "Accessories", "description": "Ergonomic design"},
+    {"name": "Mechanical Keyboard", "price": "$89", "category": "Accessories", "description": "RGB backlit"},
+    {"name": "4K Monitor", "price": "$399", "category": "Electronics", "description": "27-inch display"},
+    {"name": "USB-C Hub", "price": "$49", "category": "Accessories", "description": "7-in-1 adapter"},
+    {"name": "Webcam HD", "price": "$79", "category": "Electronics", "description": "1080p video"},
+    {"name": "Desk Lamp", "price": "$39", "category": "Office", "description": "LED adjustable"},
+    {"name": "Phone Stand", "price": "$19", "category": "Accessories", "description": "Aluminum stand"},
+    {"name": "Headphones", "price": "$149", "category": "Electronics", "description": "Noise cancelling"},
+    {"name": "Tablet", "price": "$499", "category": "Electronics", "description": "10-inch screen"},
+    {"name": "Smart Watch", "price": "$299", "category": "Electronics", "description": "Fitness tracking"},
+    {"name": "Portable SSD", "price": "$129", "category": "Storage", "description": "1TB capacity"},
+    {"name": "Power Bank", "price": "$39", "category": "Accessories", "description": "20000mAh"},
+    {"name": "Cable Organizer", "price": "$15", "category": "Office", "description": "Keep cables tidy"},
+    {"name": "Laptop Stand", "price": "$45", "category": "Office", "description": "Adjustable height"},
+    {"name": "Bluetooth Speaker", "price": "$69", "category": "Electronics", "description": "Waterproof"},
+    {"name": "Microphone", "price": "$99", "category": "Electronics", "description": "Studio quality"},
+    {"name": "Graphics Tablet", "price": "$199", "category": "Electronics", "description": "For designers"},
+    {"name": "Desk Mat", "price": "$25", "category": "Office", "description": "Large mouse pad"},
+    {"name": "Monitor Arm", "price": "$79", "category": "Office", "description": "Dual monitor"},
+    {"name": "Wireless Charger", "price": "$29", "category": "Accessories", "description": "Fast charging"},
+    {"name": "Laptop Bag", "price": "$59", "category": "Accessories", "description": "Water resistant"},
+    {"name": "Docking Station", "price": "$179", "category": "Electronics", "description": "Multi-port"},
+    {"name": "Ergonomic Chair", "price": "$399", "category": "Office", "description": "Lumbar support"},
+    {"name": "Standing Desk", "price": "$599", "category": "Office", "description": "Electric adjustable"}
+  ]
+}

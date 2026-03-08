@@ -1,0 +1,11 @@
+version: 1
+
+sitemaps:
+  website:
+    origin: https://main--test-aem-app--dvndrj.aem.live
+    lastmod: YYYY-MM-DD
+    hreflang:
+      en: https://main--test-aem-app--dvndrj.aem.live
+    alternate: []
+    languages:
+      - en

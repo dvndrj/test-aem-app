@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Day 4 Demo - Product List with Pagination</title>
+    <meta name="description" content="Demo page showing product list with pagination">
+    <meta property="og:title" content="Day 4 Demo - Product List">
+    <meta property="og:description" content="Demo page showing product list with pagination">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/blocks/product-list-demo/product-list-demo.css">
+    <script src="/scripts/aem.js" type="module"></script>
+    <script src="/scripts/scripts.js" type="module"></script>
+</head>
+<body class="appear">
+    <main>
+        <div class="section">
+            <div>
+                <h1>Day 4 - Product List Demo</h1>
+                <p>This page demonstrates the product list block with pagination (20 items per page).</p>
+                <p>Total: 25 products. Page 1 shows 20 items, Page 2 shows 5 items.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div>
+                <div class="product-list-demo block" data-block-name="product-list-demo">
+                </div>
+            </div>
+        </div>
+
+        <div class="section grey">
+            <div>
+                <h2>Features Demonstrated</h2>
+                <ul>
+                    <li>✓ Displays 20 items per page</li>
+                    <li>✓ Previous/Next pagination buttons</li>
+                    <li>✓ Responsive grid layout (3 columns on desktop, 1 on mobile)</li>
+                    <li>✓ Hover effects on cards</li>
+                    <li>✓ Page counter showing current page and total</li>
+                    <li>✓ Smooth scroll to top on page change</li>
+                </ul>
+                <h3>How to Use in Production</h3>
+                <p>In DA.live, create a spreadsheet with product data, then use:</p>
+                <pre>| Product List |
+|--------------| 
+| /products |</pre>
+                <p>The block will fetch data from <code>/products.json</code></p>
+            </div>
+        </div>
+    </main>
+
+    <script type="module">
+        import decorate from '/blocks/product-list-demo/product-list-demo.js';
+        const block = document.querySelector('.product-list-demo');
+        if (block) {
+            decorate(block);
+        }
+    </script>
+</body>
+</html>
